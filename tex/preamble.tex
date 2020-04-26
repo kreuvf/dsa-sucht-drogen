@@ -1,0 +1,162 @@
+\documentclass[11pt,twoside]{article}      % Specifies the document class
+
+\usepackage{mathspec} % Must load before polyglossia, otherwise "! LaTeX Error: Option clash for package fontspec."
+\setprimaryfont{Linux Libertine O}
+\setmainfont[Mapping=tex-text]{Linux Libertine O} % Mapping=tex-text important for conversion of -- to en dashes
+
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=german,spelling=new]{german}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+\usepackage{geometry}
+\geometry{a4paper, left=2cm, right=2cm, top=3cm, bottom=3cm}
+
+\usepackage{siunitx}
+\sisetup{
+	exponent-product = \cdot,
+	fraction-function = \sfrac,
+	group-digits = integer,
+	group-minimum-digits = 4,
+	group-separator = \text{.},
+	input-product = *,
+	inter-unit-product ={}\cdot{},
+	list-units = repeat,
+	mode = text,
+	multi-part-units = repeat,
+	output-decimal-marker = \text{,},
+	output-product = \cdot,
+	qualifier-mode = subscript,
+	quotient-mode = fraction,
+	range-units = repeat,
+	separate-uncertainty = true,
+	table-figures-uncertainty = 1,
+	table-figures-integer = 1,
+	table-number-alignment = center-decimal-marker
+}%
+\DeclareSIUnit{\K}{K}
+\DeclareSIUnit{\H}{H}
+\DeclareSIUnit{\S}{S}
+\DeclareSIUnit{\D}{D}
+\DeclareSIUnit{\h}{h}
+\DeclareSIUnit{\AP}{AP}
+\DeclareSIUnit{\GP}{GP}
+\DeclareSIUnit{\AsP}{AsP}
+\DeclareSIUnit{\ZfP}{ZfP}
+\DeclareSIUnit{\ZfPstern}{ZfP*}
+
+\usepackage{import}
+\usepackage[intoc]{nomencl}
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+\makenomenclature
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\usepackage{xfrac}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xunicode}
+
+\usepackage{xltxtra}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{tabularx}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\usepackage{caption}
+\captionsetup{belowskip=12pt,aboveskip=6pt}
+
+\usepackage{threeparttable}
+
+\usepackage{pdfcprot}
+\usepackage[grumpy]{gitinfo2}
+
+% Taken from Schr4t
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty 10000
+\vfuzz \hfuzz
+\raggedbottom
+% /Taken from Schr4t
+
+\usepackage{xcolor}
+\definecolor{linkgreen}{rgb}{0.051,0.50,0.15}
+\definecolor{uriblue}{rgb}{0.051,0.15,0.50}
+\definecolor{isugrey}{rgb}{0.2,0.2,0.2}
+
+% xstring: einfache Stringverarbeitung
+% Zur Extraktion des Datums aus \gitAuthorIsoDate: 2016-04-25 20:35:56 +0200
+% Ziel: 20160425203556
+% Zeitzoneninformation wird wahrscheinlich aus der Umgebung genommen; muss
+\usepackage{xstring}
+\StrLeft{\gitAuthorIsoDate}{4}[\isuAuthorPDFyear]
+\StrMid{\gitAuthorIsoDate}{6}{7}[\isuAuthorPDFmonth]
+\StrMid{\gitAuthorIsoDate}{9}{10}[\isuAuthorPDFday]
+\StrMid{\gitAuthorIsoDate}{12}{13}[\isuAuthorPDFhour]
+\StrMid{\gitAuthorIsoDate}{15}{16}[\isuAuthorPDFmin]
+\StrMid{\gitAuthorIsoDate}{18}{19}[\isuAuthorPDFsecond]
+\StrMid{\gitAuthorIsoDate}{21}{21}[\isuAuthorPDFTZsign]
+\StrMid{\gitAuthorIsoDate}{22}{23}[\isuAuthorPDFTZhour]
+\StrMid{\gitAuthorIsoDate}{24}{25}[\isuAuthorPDFTZmin]
+\newcommand{\isuPDFdate}{%
+	\isuAuthorPDFyear%
+	\isuAuthorPDFmonth%
+	\isuAuthorPDFday%
+	\isuAuthorPDFhour%
+	\isuAuthorPDFmin%
+	\isuAuthorPDFsecond%
+	\isuAuthorPDFTZsign%
+	\isuAuthorPDFTZhour%
+	:\isuAuthorPDFTZmin%
+}
+
+\usepackage[]{hyperref}
+\hypersetup{
+	pdfborder = {0 0 1},
+	pdfborderstyle = {/S/U/W 1},
+	breaklinks = true,
+	colorlinks = false,
+	citebordercolor = linkgreen,
+	linkbordercolor = linkgreen,
+	urlbordercolor = uriblue,
+	pdftitle = {Regeln für Viertelzauberer -- eine inoffizielle Regelüberarbeitung auf Basis von Das Schwarze Auge 4.1},
+	pdfauthor = {Steven Koenig / Isurandil},
+	pdfsubject = {Analyse und anschließende Überarbeitung der Regeln für Viertelzauberer in DSA4.1},
+	pdfkeywords = {Version: \gitHash{}, date: \gitAuthorDate{}, branch: \gitBranch{}},
+	pdfinfo={
+		CreationDate={D:\isuPDFdate{}},
+		ModDate={D:\isuPDFdate{}},
+	}
+}
+\urlstyle{rm}
+
+
+% Redefinitions
+\renewcommand{\nobreakspace}[1]{ #1}% The space used is U+00A0 NO-BREAK SPACE; This is a fix for the error "! LaTeX Error: Command \nobreakspace unavailable in encoding EU1."
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+	\olditemize
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+}
+
+\let\oldenumerate\enumerate
+\renewcommand{\enumerate}{
+	\oldenumerate
+	\setlength{\topsep}{0pt}
+	\setlength{\partopsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+}
