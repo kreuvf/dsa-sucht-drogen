@@ -12,7 +12,7 @@ DSASUCHTDROGEN = \
 dsa-sucht-drogen.pdf: _dsa-sucht-drogen.tex
 	xelatex _dsa-sucht-drogen.tex
 	makeindex _dsa-sucht-drogen.nlo -s nomencl.ist -o _dsa-sucht-drogen.nls
-	#biber _dsa-sucht-drogen
+	biber _dsa-sucht-drogen
 	mv _dsa-sucht-drogen.pdf dsa-sucht-drogen.pdf
 
 _dsa-sucht-drogen.tex: $(DSASUCHTDROGEN)
@@ -24,19 +24,19 @@ once: _dsa-sucht-drogen.tex
 thrice: _dsa-sucht-drogen.tex
 	xelatex _dsa-sucht-drogen.tex
 	makeindex _dsa-sucht-drogen.nlo -s nomencl.ist -o _dsa-sucht-drogen.nls
-	#biber _dsa-sucht-drogen
+	biber _dsa-sucht-drogen
 	xelatex _dsa-sucht-drogen.tex
-	#biber _dsa-sucht-drogen
+	biber _dsa-sucht-drogen
 	mv _dsa-sucht-drogen.pdf dsa-sucht-drogen.pdf
 
 xfour: _dsa-sucht-drogen.tex
 	xelatex _dsa-sucht-drogen.tex
 	makeindex _dsa-sucht-drogen.nlo -s nomencl.ist -o _dsa-sucht-drogen.nls
-	#biber _dsa-sucht-drogen
+	biber _dsa-sucht-drogen
 	xelatex _dsa-sucht-drogen.tex
-	#biber _dsa-sucht-drogen
+	biber _dsa-sucht-drogen
 	xelatex _dsa-sucht-drogen.tex
-	#biber _dsa-sucht-drogen
+	biber _dsa-sucht-drogen
 	mv _dsa-sucht-drogen.pdf dsa-sucht-drogen.pdf
 
 clean-tex:
