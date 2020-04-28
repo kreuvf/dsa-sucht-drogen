@@ -115,6 +115,22 @@
 	:\isuAuthorPDFTZmin%
 }
 
+% % % % % % % % % % % % % % % % % % % %
+% xpatch
+\usepackage{xpatch}
+
+% % % % % % % % % % % % % % % % % % % %
+% biblatex
+\usepackage[sorting=none,style=numeric-comp,maxcitenames=2,maxbibnames=99999,hyperref=true,backref=true,abbreviate=false,alldates=iso,seconds=true,backend=biber]{biblatex}
+
+\xpatchbibmacro{name:andothers}{%
+  \bibstring{andothers}%
+}{%
+  \bibstring[\textit]{andothers}%
+}{}{}
+
+\addbibresource{dsa-refs.bib}
+
 \usepackage[]{hyperref}
 \hypersetup{
 	pdfborder = {0 0 1},
