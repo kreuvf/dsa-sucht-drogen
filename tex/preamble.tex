@@ -135,6 +135,17 @@
 
 \addbibresource{dsa-refs.bib}
 
+% % % % % % % % % % % % % % % % % % % %
+% varioref
+\usepackage{varioref}
+
+\renewcommand{\reftextfaceafter}{auf der gegenüberliegenden Seite}
+\renewcommand{\reftextfacebefore}{auf der gegenüberliegenden Seite}
+\renewcommand{\reftextafter}{auf der vorherigen Seite}
+\renewcommand{\reftextbefore}{auf der nächsten Seite}
+
+% % % % % % % % % % % % % % % % % % % %
+% hyperref
 \usepackage[]{hyperref}
 \hypersetup{
 	pdfborder = {0 0 1},
@@ -154,6 +165,10 @@
 	}
 }
 \urlstyle{rm}
+
+% % % % % % % % % % % % % % % % % % % %
+% cleveref
+\usepackage[noabbrev,nameinlink]{cleveref}
 
 
 % Redefinitions
