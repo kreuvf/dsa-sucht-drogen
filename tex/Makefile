@@ -9,7 +9,7 @@ DSASUCHTDROGEN = \
 	random-drugs.tex \
 	tail.tex
 
-dsa-sucht-drogen.pdf: _dsa-sucht-drogen.tex
+dsa-sucht-drogen.pdf: _dsa-sucht-drogen.tex dsa-refs.bib
 	xelatex _dsa-sucht-drogen.tex
 	makeindex _dsa-sucht-drogen.nlo -s nomencl.ist -o _dsa-sucht-drogen.nls
 	biber _dsa-sucht-drogen
