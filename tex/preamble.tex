@@ -121,13 +121,17 @@
 
 % % % % % % % % % % % % % % % % % % % %
 % biblatex
-\usepackage[sorting=none,style=numeric-comp,maxcitenames=2,maxbibnames=99999,hyperref=true,backref=true,abbreviate=false,alldates=iso,seconds=true,backend=biber]{biblatex}
+\usepackage[sorting=none,style=alphabetic,maxcitenames=2,maxbibnames=99999,hyperref=true,backref=true,abbreviate=false,alldates=iso,seconds=true,backend=biber]{biblatex}
+
+\DeclareFieldFormat{labelalpha}{\thefield{entrykey}}
+\DeclareFieldFormat{extraalpha}{}
 
 \xpatchbibmacro{name:andothers}{%
   \bibstring{andothers}%
 }{%
   \bibstring[\textit]{andothers}%
 }{}{}
+
 
 \addbibresource{dsa-refs.bib}
 
