@@ -56,6 +56,8 @@
     \vskip0.5em}%
 }
 
+
+
 \usepackage{xfrac}
 \usepackage{booktabs}
 \usepackage{multirow}
@@ -71,8 +73,13 @@
 
 \usepackage{threeparttable}
 
-\usepackage{pdfcprot}
-\usepackage[grumpy]{gitinfo2}
+\usepackage[table]{xcolor} % load before gitinfo2
+\definecolor{linkgreen}{rgb}{0.051,0.50,0.15}
+\definecolor{uriblue}{rgb}{0.051,0.15,0.50}
+\definecolor{isugrey}{rgb}{0.2,0.2,0.2}
+\definecolor{tablelightblue}{rgb}{0.902, 0.929, 1.000} % desaturated, bright version of digiblue (223, 10, 100 in HSV)
+
+\usepackage{gitinfo2}
 
 % Taken from Schr4t
 \tolerance 1414
@@ -83,11 +90,6 @@
 \vfuzz \hfuzz
 \raggedbottom
 % /Taken from Schr4t
-
-\usepackage{xcolor}
-\definecolor{linkgreen}{rgb}{0.051,0.50,0.15}
-\definecolor{uriblue}{rgb}{0.051,0.15,0.50}
-\definecolor{isugrey}{rgb}{0.2,0.2,0.2}
 
 % xstring: einfache Stringverarbeitung
 % Zur Extraktion des Datums aus \gitAuthorIsoDate: 2016-04-25 20:35:56 +0200
