@@ -197,6 +197,8 @@
 % cleveref
 \usepackage[noabbrev,nameinlink]{cleveref}
 
+% Nach cleveref laden
+\usepackage[hang]{footmisc}
 
 % Redefinitions
 \renewcommand{\nobreakspace}[1]{ #1}% The space used is U+00A0 NO-BREAK SPACE; This is a fix for the error "! LaTeX Error: Command \nobreakspace unavailable in encoding EU1."
@@ -226,3 +228,16 @@
 	\setlength{\parskip}{0pt}
 	\setlength{\parsep}{0pt}
 }
+
+% Footnote
+% Einzug insgesamt
+\setlength{\footnotemargin}{1.2em}
+% Zeichen rechts ausgerichtet
+% https://tex.stackexchange.com/a/236802
+\makeatletter
+\patchcmd{\@makefntext}
+  {\@makefnmark\hss}
+  {\hss\@makefnmark\hspace{4pt}}
+  {}{}
+\makeatletter
+
