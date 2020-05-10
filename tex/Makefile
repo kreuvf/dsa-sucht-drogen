@@ -4,6 +4,7 @@ DSASUCHTDROGEN = \
 	abstract.tex \
 	nomencl-entries.tex \
 	indices.tex \
+	preface.tex \
 	sucht-original.tex \
 	sucht-hausregel.tex \
 	random-drugs.tex \
