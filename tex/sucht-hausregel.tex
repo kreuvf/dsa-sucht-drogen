@@ -36,11 +36,35 @@ Die Flexibilität des Nachteils versuche ich auf zwei Wegen zu steigern:
 	\end{tabular}
 \end{table}
 
-\paragraph{Entzug und minimale Konsumhäufigkeit}
-Todo.
+\paragraph{Entzug und Konsumhäufigkeit}
+Die Auswirkungen des Entzugs verhalten sich wie in \citetitle{WdH} und \citetitle{WdS} beschrieben. Allerdings treten Entzugssymptome nicht nach einer festen Zeitspanne seit dem letzten Konsum auf, sondern werden per Würfelwurf durch den Meister verdeckt ermittelt. Die Krankheitsstufe der Sucht gibt dabei die \emph{Konsumhäufigkeit} innerhalb von dreißig Tagen an. Teilt man die Konsumhäufigkeit durch die Krankheitsstufe der Sucht, so erhält man die durchschnittliche Konsumpause. Für ausgewählte Werte hält \vref{tbl-konsum} Konsumhäufigkeiten und die sich daraus ergebenden durchschnittlichen Konsumpausen, meine Empfehlungen für passende Würfelproben und zum Vergleich die Statistik des Wurfs bereit. Für jede Stufe des Entzugs wird dabei ein eigener Wurf fällig. Das heißt, dass nach Ablauf der Zeit bis zum nächsten Konsum der Entzug auf Stufe 1 beginnt und der Meister wieder durch Würfelwurf verdeckt ermittelt, wann die zweite Stufe des Entzugs beginnt.
+
+\begin{table}
+	\centering
+	\caption[Auswirkung der Krankheitsstufe auf Entzug und Konsumhäufigkeit]{Auswirkung der Krankheitsstufe auf Entzug und Konsumhäufigkeit. Neben der sich aus der Krankheitsstufe und damit auch der Konsumhäufigkeit innerhalb von dreißig Tagen ergebenden durchschnittlichen Konsumpause sind Empfehlungen für einen Wurf auf die Dauer bis zum Einsetzen des Entzugs und die dazugehörigen minimalen, durchschnittlichen und maximalen Würfelergebnisse zum Vergleich angegeben.\label{tbl-konsum}}
+	\rowcolors{2}{tablelightblue}{white}
+	\begin{threeparttable}
+		\begin{tabular}{cccccc}
+			\toprule
+			 & \multicolumn{2}{c}{Konsumpause in d} & \multicolumn{3}{c}{Wurfstatistik} \\
+			\cmidrule(lr){2-3}
+			\cmidrule(lr){4-6}
+			\multirow{-2}*{Konsumhäufigkeit pro \SId{30}} & {Durchschnitt} & {Wurf} & {min.} & {Durchschnitt} & {max.} \\
+			\hline
+			2 & 15 & 4 + 1W20 & 5 & 14,5 & 24 \\
+			5 & 6,0 & 1 + 1W10 & 2 & 6,5 & 11 \\
+			8 & 3,75 & 1W6 & 1 & 3,5 & 6 \\
+			12 & 2,5 & 1W4 & 1 & 2,5 & 4 \\
+			15 & 2,0 & 1W3 & 1 & 2,0 & 3 \\
+			20 & 1,5 & 1W4 − 1 & 0\tnotex{tnote:null} & 1,5 & 3 \\
+			30 & 1,0 & 1W3 − 1 & 0\tnotex{tnote:null} & 1,0 & 2 \\
+			\bottomrule
+		\end{tabular}
+		\begin{tablenotes}
+			\item\label{tnote:null} Jedes Mal, wenn als Ergebnis eine Null erzielt wird, bedeutet dies, dass umgehend eine weitere Dosis und ein weiterer Wurf nötig werden. Es ist Meisterentscheid, ob dabei die Sucht so stark ist, dass nach Ende des aktuellen Rausches sofort ein weiterer Rausch gebraucht wird, oder noch kein Rausch eingetreten ist. Die Auswirkungen \fxnote{Verweis auf Auswirkungen bei unbenannten Suchtmitteln hinzufügen.} gelten trotzdem für \emph{jede} konsumierte Dosis. Meistern empfehle ich daher Spieler deutlich auf die Gefahr hinzuweisen, sich für eine Sucht mit derart hohen Werten zu entscheiden.
+		\end{tablenotes}
+	\end{threeparttable}
+\end{table}
 
 \paragraph{Generierungspunkte}
 Um die Einschränkungen benannter Drogen zu berücksichtigen, gibt es für diese auch weiterhin GP in Höhe der doppelten Krankheitsstufe. Wer sich hingegen für allgemeine Wirkungen entscheidet, erhält nur GP in der Höhe der einfachen Krankheitsstufe.
-
-
-
