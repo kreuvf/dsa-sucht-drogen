@@ -9,6 +9,8 @@ DSASUCHTDROGEN = \
 	sucht-hausregel.tex \
 	random-drugs.tex \
 	tail.tex
+FIGS = \
+	Regelübersicht_600dpi.png
 
 dsa-sucht-drogen.pdf: _dsa-sucht-drogen.tex dsa-refs.bib
 	xelatex _dsa-sucht-drogen.tex
@@ -40,6 +42,12 @@ xfour: _dsa-sucht-drogen.tex
 	biber _dsa-sucht-drogen
 	mv _dsa-sucht-drogen.pdf dsa-sucht-drogen.pdf
 
+figs: $(FIGS)
+
+%_600dpi.png: %.svg
+	inkscape -z -d 600 -b white -e $@ $^
+	optipng $@
+
 clean-tex:
 	rm -f _dsa-sucht-drogen.tex
 	rm -f _dsa-sucht-drogen.bbl \
@@ -67,11 +75,14 @@ clean-intermediary:
 	_dsa-sucht-drogen.aux	
 	if [ -d pythontex-files-_dsa-sucht-drogen ] ; then rmdir pythontex-files-_dsa-sucht-drogen ; fi
 
-clean-almost-all: clean-intermediary clean-tex
+clean-figs:
+	rm -f $(FIGS)
+
+clean-almost-all: clean-intermediary clean-figs clean-tex
 
 clean-all: clean-almost-all
 	rm -f dsa-sucht-drogen.pdf
 
 .PHONY: once thrice xfour \
 	clean-tex \
-	clean-intermediary clean-almost-all clean-all
+	clean-intermediary clean-figs clean-almost-all clean-all
