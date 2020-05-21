@@ -1,0 +1,8 @@
+{
+	"left": "Dieser Text beschreibt die Situation, in die der Charakter geraten ist, und bricht an einer oder mehreren Stellen mit einer Ellipse ab, um ...",
+	"argc": 1,
+	"right":
+	{
+		"argc-explained": ["... zu erklären, dass 'argc' für die Anzahl Ellipsen im linken Text steht. Der Parser erwartet list-Einträge mit len() von mindestens argc. Überschüssige Einträge werden ignoriert."]
+	}
+}

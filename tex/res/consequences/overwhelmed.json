@@ -1,0 +1,9 @@
+{
+	"left": "Im Hinterzimmer einer düsteren Kaschemme bist du mit einem „Händler“ verabredet, doch wirst du stutzig, als auch nach etlichen Minuten niemand kommt. So schaust du dich ein wenig um, wirst aber entdeckt und für einen Spitzel gehalten. Du hast keine Chance zu fliehen, wirst gefesselt, geknebelt und dir werden die Augen verbunden. Als sie dich weggesperrt haben, um zu überlegen, was sie mit dir tun sollen, ...",
+	"argc": 1,
+	"right":
+	{
+		"help-goodhearted": ["... klopft jemand an deine Zellenwand und bietet dir seine Hilfe an, wenn du dafür der Person zu helfen versprichst.\nMeisterinfo: Es kann sich hierbei um x-beliebige Meisterpersonen handeln. Ein verdeckter Phexgeweihter könnte den Charakter schon einige Zeit im Auge haben und davon überzeugt sein, dass Phex diese Person mit ihren Fähigkeiten geschickt hat, um ihn bei einer gewagten Aktion zu unterstützen."],
+		"help-pact": ["... vernimmst du eine seltsam eindringlich klingende Stimme, die dir einen Handel anbietet. Du wirst aus deiner misslichen Lage befreit, dafür versprichst du der Stimme ihr in Zukunft zu helfen.\nMeisterinfo: Dem Charakter wird ein minderer Pakt angeboten. Die erzdämonische Domäne sollte zur Situation und dem Charakter, insbesondere seinen schlechten Eigenschaften, passen."]
+	}
+}

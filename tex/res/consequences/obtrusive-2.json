@@ -1,0 +1,9 @@
+{
+	"left": "Du fragst so aufdringlich nach Drogen, dass man dich für einen Spitzel der Wachen hält. Du wirst in einen Hinterhalt geführt. Du schaffst es nicht zu entkommen, ...",
+	"argc": 1,
+	"right":
+	{
+		"injury-severe": ["... hast dich auf der Flucht aber schwer verletzt, insgesamt 6W3 SP erlitten, dir eine Wunde zugezogen und dich dann in einem verlassenen Gebäude versteckt. Du bist eingeschlafen und erst nach vielen Stunden wieder erwacht. Da deine Wunden nicht behandelt wurden, besteht die große Gefahr, dass Wundfieber ausbricht."],
+		"injury-healed": ["... hast dich im Kampf aber sehr schwer verletzt, insgesamt 8W3 SP erlitten, dir zwei Wunden zugezogen und bist ohnmächtig zusammengebrochen. Du wurdest zufällig von einem Traviageweihten/Perainegeweihten/Anconiter/Heiler/Bettler/der Stadtwache aufgelesen und gesundgepflegt. Du verdankst dieser Person dein Leben und bist zumindest moralisch entsprechende Gegenleistungen schuldig."]
+	}
+}
