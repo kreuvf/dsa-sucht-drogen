@@ -24,3 +24,4 @@
 **/*.nav
 **/*.snm
 tex/dsa-sucht-drogen.pdf
+**/pairs.txt
