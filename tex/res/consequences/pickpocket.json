@@ -3,11 +3,11 @@
 	"argc": 1,
 	"right":
 	{
-		"lose-money-0": ["... 1W10 · 1% des mitgeführten Geldes."],
-		"lose-money-1": ["... 1W10 · 2% des mitgeführten Geldes."],
-		"lose-money-2": ["... 1W10 · 4% des mitgeführten Geldes."],
-		"lose-money-3": ["... 1W10 · 6% des mitgeführten Geldes."],
-		"lose-money-4": ["... 1W10 · 8% des mitgeführten Geldes."],
-		"lose-money-5": ["... 1W10 · 10% des mitgeführten Geldes."]
+		"lose-money-0": ["... 1W10~·~1\\% des mitgeführten Geldes."],
+		"lose-money-1": ["... 1W10~·~2\\% des mitgeführten Geldes."],
+		"lose-money-2": ["... 1W10~·~4\\% des mitgeführten Geldes."],
+		"lose-money-3": ["... 1W10~·~6\\% des mitgeführten Geldes."],
+		"lose-money-4": ["... 1W10~·~8\\% des mitgeführten Geldes."],
+		"lose-money-5": ["... 1W10~·~10\\% des mitgeführten Geldes."]
 	}
 }

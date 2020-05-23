@@ -1,13 +1,13 @@
 {
-	"left": "Man bietet dir an, wonach du gesucht hast. Die Qualität beträgt 1W5 − 3 TaP*. Es kostet dich ...",
+	"left": "Man bietet dir an, wonach du gesucht hast. Die Qualität beträgt 1W5~−~3~TaP*. Es kostet dich ...",
 	"argc": 1,
 	"right":
 	{
-		"expensive-0": ["... 1W3 · 10% mehr als gewöhnlich."],
-		"expensive-1": ["... 2W3 · 10% mehr als gewöhnlich."],
-		"expensive-2": ["... 5W3 · 10% mehr als gewöhnlich."],
-		"expensive-3": ["... 3W10 · 10% mehr als gewöhnlich."],
-		"expensive-4": ["... 5W10 · 10% mehr als gewöhnlich."],
-		"expensive-5": ["... 10W10 · 10% mehr als gewöhnlich."]
+		"expensive-0": ["... 1W3~·~10\\% mehr als gewöhnlich."],
+		"expensive-1": ["... 2W3~·~10\\% mehr als gewöhnlich."],
+		"expensive-2": ["... 5W3~·~10\\% mehr als gewöhnlich."],
+		"expensive-3": ["... 3W10~·~10\\% mehr als gewöhnlich."],
+		"expensive-4": ["... 5W10~·~10\\% mehr als gewöhnlich."],
+		"expensive-5": ["... 10W10~·~10\\% mehr als gewöhnlich."]
 	}
 }
