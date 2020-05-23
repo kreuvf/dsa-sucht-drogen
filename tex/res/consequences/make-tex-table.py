@@ -28,28 +28,11 @@ consequences = {}
 for entry in pairs:
 	content = pairs[entry]
 	if content[1] == 1:
-		# Get starts of ' ...' and '...'
-		loffset = content[0].find(' ...')
-		roffset = content[2][0].find('...') + len('...')
-		msg = content[0][:loffset] + content[2][0][roffset:]
+		msg = content[0].replace(' ...', '') + content[2][0].replace('...', '')
 	elif content[1] == 2:
-		# Get starts of ' ...' and '...'
-		offset = 0
-		loffset = []
-		roffset = []
-		for match in re.finditer(' \.\.\.', content[0]):
-			loffset.append(match.start())
-		for right in content[2]:
-			roffset.append(right.find('...') + len('...'))
-		# Build the message from parts
-		# Part 1: left up to first ellipsis
-		msg = content[0][:loffset[0]]
-		# Part 2: first right part without leading ellipsis
-		msg = msg + content[2][0][roffset[0]:]
-		# Part 3: newlines after first sentence up to second ellipsis
-		msg = msg + content[0][loffset[0] + len(' ...'):loffset[1]]
-		# Part 4: second right part without leading ellipsis.
-		msg = msg + content[2][1][roffset[1]:]
+		msg = content[0]
+		msg = re.sub(' \.\.\.', content[2][0].replace('...', ''), msg, 1)
+		msg = re.sub(' \.\.\.', content[2][1].replace('...', ''), msg, 1)
 	else:
 		print("Warning: argc other than 1 or 2 encountered. Doing nothing.")
 		break
