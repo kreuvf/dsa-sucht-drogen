@@ -266,3 +266,11 @@
   {}{}
 \makeatletter
 
+% Source: http://tex.stackexchange.com/questions/278872/pythontex-inputiffileexists-for-inputting-rows-in-longtable-creates-spurious
+% No extra space after \InputIfFileExists in table
+\makeatletter
+\@ifundefined{filehook@csuse}
+  {\let\TablesafeInputIfFileExists\InputIfFileExists}% filehook is not loaded
+  {\let\TablesafeInputIfFileExists\latex@InputIfFileExists}
+\makeatletter
+
