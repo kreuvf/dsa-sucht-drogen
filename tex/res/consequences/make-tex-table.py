@@ -4,12 +4,12 @@
 
 import json
 import re
-import pprint
 
 # Populate files list
 exec(compile(open("consequences.py", "r").read(), "consequences.py", 'exec'))
-# The list named 'files' exists now!
+## The list named 'files' exists now!
 
+# Prepare pairs of left-side text and right-side text
 pairs = {}
 
 for file in files:
@@ -23,7 +23,8 @@ for file in files:
 				content['right'][right]
 			]
 
-consequences = {}
+# Prepare single-string texts for consequences
+conseqDict = {}
 
 for entry in pairs:
 	content = pairs[entry]
@@ -36,7 +37,49 @@ for entry in pairs:
 	else:
 		print("Warning: argc other than 1 or 2 encountered. Doing nothing.")
 		break
-	consequences[entry] = msg
+	# format() is required to convert {{}} to {}
+	# {{}} were deliberately introduced for future flexbility (maybe ...)
+	conseqDict[entry] = msg.format()
 
-pp = pprint.PrettyPrinter(indent = 4, width = 120)
-pp.pprint(consequences)
+# Prepare consequences list in ascending order of 'severity'
+conseqList = []
+
+with open('./ranking.txt', 'r') as f:
+	conseqOrder = list(f)
+
+## Cut away trailing newlines
+for index in range(len(conseqOrder[:-1])):
+	conseqOrder[index] = conseqOrder[index][:-1]
+
+## Build list
+for conseq in conseqOrder:
+	conseqList.append(conseqDict[conseq])
+
+# Build strings with TeX Table rows
+tablerows = []
+## Starting severity is 2, the minimum value
+severity = 2
+
+## Determination of the last severity
+## For 20 consequences and starting with severity 2, 19 other consequences come
+## after it, making the max. severity 21
+## -1 to correct off-by-one error
+severityMax = severity + len(conseqList) - 1
+
+for conseq in conseqList:	
+	if severity == severityMax:
+		severityStr = str(severityMax) + '+'
+	else:
+		severityStr = str(severity)
+	tablerow = '{{{}}} & {{{}}} \\\\'.format(
+		severityStr,
+		conseq
+	)
+	tablerows.append(tablerow)
+	severity = severity + 1
+
+# Write output
+with open('./consequences.tex', 'w') as f:
+	for row in tablerows:
+		print(row)
+		f.write(row + '\n')
