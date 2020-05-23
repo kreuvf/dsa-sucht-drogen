@@ -3,11 +3,11 @@
 	"argc": 2,
 	"right":
 	{
-		"cheap-0": ["... (1+1W2)-tel der gewöhnlichen Kosten.", "... −~3~TaP*."],
-		"cheap-1": ["... 2W3-tel der gewöhnlichen Kosten.", "... −~6~TaP*."],
-		"cheap-2": ["... 5W3-tel der gewöhnlichen Kosten.", "... −~9~TaP*."],
-		"cheap-3": ["... 3W10-tel der gewöhnlichen Kosten.", "... −~12~TaP*."],
-		"cheap-4": ["... 5W10-tel der gewöhnlichen Kosten.", "... −~15~TaP*."],
-		"cheap-5": ["... 10W10-tel der gewöhnlichen Kosten.", "... −~18~TaP*."]
+		"cheap-0": ["... (1+1W2)-tel der gewöhnlichen Kosten.", "... minus 3~TaP*."],
+		"cheap-1": ["... 2W3-tel der gewöhnlichen Kosten.", "... minus 6~TaP*."],
+		"cheap-2": ["... 5W3-tel der gewöhnlichen Kosten.", "... minus 9~TaP*."],
+		"cheap-3": ["... 3W10-tel der gewöhnlichen Kosten.", "... minus 12~TaP*."],
+		"cheap-4": ["... 5W10-tel der gewöhnlichen Kosten.", "... minus 15~TaP*."],
+		"cheap-5": ["... 10W10-tel der gewöhnlichen Kosten.", "... minus 18~TaP*."]
 	}
 }

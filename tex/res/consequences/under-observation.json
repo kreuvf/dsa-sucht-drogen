@@ -1,8 +1,8 @@
 {
-	"left": "Du warst nicht erfolgreich, aber wirst das Gefühl nicht mehr los beobachtet zu werden.",
+	"left": "Du warst nicht erfolgreich, ...",
 	"argc": 1,
 	"right":
 	{
-		"under-observation": ["\\newline\\emph{{Meisterinfo:}} Der Charakter hat Spitzel der lokalen Unterweltbosse zur Gruppe geführt. Diese steht für die nächsten 1W3 Wochen unter ständiger Beobachtung."]
+		"under-observation": ["... aber wirst das Gefühl nicht mehr los beobachtet zu werden.\\newline\\emph{{Meisterinfo:}} Der Charakter hat Spitzel der lokalen Unterweltbosse zur Gruppe geführt. Diese steht für die nächsten 1W3 Wochen unter ständiger Beobachtung."]
 	}
 }
