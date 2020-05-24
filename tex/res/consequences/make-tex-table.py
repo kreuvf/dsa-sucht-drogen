@@ -53,7 +53,7 @@ for index in range(len(conseqOrder[:-1])):
 
 ## Build list
 for conseq in conseqOrder:
-	conseqList.append(conseqDict[conseq])
+	conseqList.append([conseqDict[conseq], conseq])
 
 # Build strings with TeX Table rows
 tablerows = []
@@ -66,14 +66,16 @@ severity = 2
 ## -1 to correct off-by-one error
 severityMax = severity + len(conseqList) - 1
 
-for conseq in conseqList:	
+for conseq in conseqList:
+	conseqStr = conseq[0]
 	if severity == severityMax:
 		severityStr = str(severityMax) + '+'
 	else:
 		severityStr = str(severity)
+	severityStr = severityStr + ' \\conseq{{{}}}'.format(conseq[1])
 	tablerow = '{{{}}} & {{{}}} \\\\'.format(
 		severityStr,
-		conseq
+		conseqStr
 	)
 	tablerows.append(tablerow)
 	severity = severity + 1
