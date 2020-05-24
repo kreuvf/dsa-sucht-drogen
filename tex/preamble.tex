@@ -274,3 +274,8 @@
   {\let\TablesafeInputIfFileExists\latex@InputIfFileExists}
 \makeatletter
 
+% Eigene Counter
+% Source: https://tex.stackexchange.com/a/21305
+\newcounter{conseqno}
+\newcommand{\conseq}[1]{\refstepcounter{conseqno}\label{#1}}
+\setcounter{conseqno}{1}
