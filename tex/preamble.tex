@@ -4,8 +4,6 @@
 \setprimaryfont{Linux Libertine O}
 \setmainfont[Mapping=tex-text]{Linux Libertine O} % Mapping=tex-text important for conversion of -- to en dashes
 
-\usepackage{polyglossia}
-\setdefaultlanguage[variant=german,spelling=new]{german}
 \usepackage[autostyle=true,german=quotes]{csquotes}
 
 \usepackage{geometry}
@@ -168,6 +166,15 @@
 }
 
 % % % % % % % % % % % % % % % % % % % %
+% hyphenat
+\usepackage{hyphenat}
+
+% % % % % % % % % % % % % % % % % % % %
+% babel
+\usepackage[main=ngerman]{babel}
+\addto\extrasngerman{\sisetup{output-decimal-marker = {,}}}
+
+% % % % % % % % % % % % % % % % % % % %
 % xpatch
 \usepackage{xpatch}
 
@@ -189,12 +196,14 @@
 
 % % % % % % % % % % % % % % % % % % % %
 % varioref
-\usepackage[ngerman]{varioref}
+\usepackage{varioref}
 
-\renewcommand{\reftextfaceafter}{auf der gegenüberliegenden Seite}
-\renewcommand{\reftextfacebefore}{auf der gegenüberliegenden Seite}
-\renewcommand{\reftextafter}{auf der vorherigen Seite}
-\renewcommand{\reftextbefore}{auf der nächsten Seite}
+\addto\extrangerman{%
+\renewcommand{\reftextfaceafter}{auf der gegenüberliegenden Seite}%
+\renewcommand{\reftextfacebefore}{auf der gegenüberliegenden Seite}%
+\renewcommand{\reftextafter}{auf der vorherigen Seite}%
+\renewcommand{\reftextbefore}{auf der nächsten Seite}%
+}
 
 % % % % % % % % % % % % % % % % % % % %
 % hyperref
@@ -279,3 +288,8 @@
 \newcounter{conseqno}
 \newcommand{\conseq}[1]{\refstepcounter{conseqno}\label{#1}}
 \setcounter{conseqno}{1}
+
+
+% % % % % % % % % % % % % % % % % % % %
+% Hyphenation list
+\hyphenation{Phex-ge-weih-te Phex-ge-weih-ter Phex-ge-weih-ten}
