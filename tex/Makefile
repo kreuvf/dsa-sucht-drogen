@@ -12,7 +12,7 @@ DSASUCHTDROGEN = \
 FIGS = \
 	Regelübersicht_600dpi.png
 
-dsa-sucht-drogen.pdf: figs _dsa-sucht-drogen.tex dsa-refs.bib
+dsa-sucht-drogen.pdf: figs _dsa-sucht-drogen.tex consequences.tex dsa-refs.bib
 	xelatex _dsa-sucht-drogen.tex
 	makeindex _dsa-sucht-drogen.nlo -s nomencl.ist -o _dsa-sucht-drogen.nls
 	biber _dsa-sucht-drogen
@@ -21,10 +21,14 @@ dsa-sucht-drogen.pdf: figs _dsa-sucht-drogen.tex dsa-refs.bib
 _dsa-sucht-drogen.tex: $(DSASUCHTDROGEN)
 	cat $(DSASUCHTDROGEN) > ./$@
 
-once: _dsa-sucht-drogen.tex
+consequences.tex:
+	$(MAKE) -C res/consequences $@
+
+once: _dsa-sucht-drogen.tex consequences.tex
+	xelatex _dsa-sucht-drogen.tex
 	mv _dsa-sucht-drogen.pdf dsa-sucht-drogen.pdf
 
-thrice: _dsa-sucht-drogen.tex
+thrice: _dsa-sucht-drogen.tex consequences.tex
 	xelatex _dsa-sucht-drogen.tex
 	makeindex _dsa-sucht-drogen.nlo -s nomencl.ist -o _dsa-sucht-drogen.nls
 	biber _dsa-sucht-drogen
@@ -32,7 +36,7 @@ thrice: _dsa-sucht-drogen.tex
 	biber _dsa-sucht-drogen
 	mv _dsa-sucht-drogen.pdf dsa-sucht-drogen.pdf
 
-xfour: _dsa-sucht-drogen.tex
+xfour: _dsa-sucht-drogen.tex consequences.tex
 	xelatex _dsa-sucht-drogen.tex
 	makeindex _dsa-sucht-drogen.nlo -s nomencl.ist -o _dsa-sucht-drogen.nls
 	biber _dsa-sucht-drogen
