@@ -104,7 +104,8 @@
 % % % % % % % % % % % % % % % % % % % %
 % enumitem
 \usepackage{enumitem}
-
+\setlist[itemize]{topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=3pt}
+\setlist[enumerate]{topsep=3pt, partopsep=0pt, parsep=0pt, itemsep=3pt}
 % Needed for \renewlist
 
 % % % % % % % % % % % % % % % % % % % %
@@ -237,31 +238,9 @@
 % Redefinitions
 \renewcommand{\nobreakspace}[1]{ #1}% The space used is U+00A0 NO-BREAK SPACE; This is a fix for the error "! LaTeX Error: Command \nobreakspace unavailable in encoding EU1."
 
-\let\olditemize\itemize
-\renewcommand{\itemize}{
-	\olditemize
-	\setlength{\topsep}{0pt}
-	\setlength{\partopsep}{0pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\itemsep}{3pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}
-}
-
 \renewcommand{\labelitemi}{\raisebox{0.15em}{\scalebox{1.2}{{\tiny{●}}}}}
 \renewcommand{\labelitemii}{\raisebox{0.2em}{\tiny{◆}}}
 \renewcommand{\labelitemiii}{\raisebox{0.15em}{\scalebox{1.4}{\tiny{▶}}}}
-
-\let\oldenumerate\enumerate
-\renewcommand{\enumerate}{
-	\oldenumerate
-	\setlength{\topsep}{0pt}
-	\setlength{\partopsep}{0pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\itemsep}{3pt}
-	\setlength{\parskip}{0pt}
-	\setlength{\parsep}{0pt}
-}
 
 % Footnote
 % Einzug insgesamt
