@@ -136,3 +136,32 @@ Die Nebenwirkungen werden ausgewürfelt: Zuerst werden für jede Nebenwirkung Wi
 
 Wird mehrmals dieselbe Nebenwirkung erwürfelt, entscheidet der Meister, ob die Nebenwirkung doppelt so lange anhält, doppelt so stark ausfällt (falls möglich) oder stattdessen eine der angrenzenden Nebenwirkungen gewählt wird. Daher sind die Nebenwirkungen auch grob nach Ähnlichkeit sortiert. Ebenso entscheidet der Meister, ob Nebenwirkungen, die für die Nebenwirkungsklasse nicht empfohlen werden, erneut gewürfelt werden. Führt der W20-Wurf zu keiner Nebenwirkung, da für dieses Ergebnis noch keine Nebenwirkung definiert ist, wird der W20-Wurf wiederholt. Ändern sich Eigenschaften, so zieht dies grundsätzlich keine Neuberechnung abgeleiteter Werte nach sich. Negative Regenerationswerte zählen wie 0.
 
+\afterpage{
+	\clearpage
+	\begin{landscape}
+		\rowcolors{2}{tablelightblue}{white}
+		\setlength{\tabcolsep}{4.25pt}
+		\setlist[itemize]{leftmargin=12pt}
+		\setlist[enumerate]{leftmargin=12pt}
+		\begin{tabularx}{\textheight}{@{\hspace{1pt}}C{1.7cm}@{\hspace{2pt}}C{1.1cm}@{\hspace{2pt}}L{5.9cm}C{1.3cm}L{10.7cm}C{0.35cm}@{\hspace{4pt}}C{0.35cm}@{\hspace{4pt}}C{0.35cm}@{\hspace{4pt}}C{0.35cm}@{\hspace{1pt}}}
+			\caption[Auswirkungen des Rauschmittelkonsums]{Auswirkungen des Rauschmittelkonsums. Aus den Würfen der ersten beiden Spalten lässt sich die dazugehörige Auswirkung des Rauschmittelkonsums ablesen. Magische Charaktere verwenden für den ersten Wurf 1W4, alle anderen Charaktere 1W3. Ist eine Auswirkung noch nicht definiert, so muss der W20 erneut gewürfelt werden. Ist mit der Auswirkung ein Zufallswert verbunden, muss dieser ebenfalls ausgewürfelt werden. Für die Auswirkung können weitere Würfe nötig werden. Die letzten vier Spalten geben die Empfehlung für die Eignung einer Auswirkung für eine bestimmte Nebenwirkungsklasse an.\label{tbl-nebenwirkungen}} \\
+			\toprule
+			{\cellcolor{white}1W3/1W4} & {\cellcolor{white}1W20} & {\cellcolor{white}Kurzbeschreibung} & {\cellcolor{white}Wert} & {\cellcolor{white}Regeltechnische Auswirkungen} &
+				{\cellcolor{white}K} & {\cellcolor{white}M} & {\cellcolor{white}L} & {\cellcolor{white}P} \\
+			\hline \endfirsthead
+			\caption[]{\cellcolor{white}\textit{Fortsetzung von der vorhergehenden Seite}} \\
+			\toprule
+			{\cellcolor{white}1W3/1W4} & {\cellcolor{white}1W20} & {\cellcolor{white}Kurzbeschreibung} & {\cellcolor{white}Wert} & {\cellcolor{white}Regeltechnische Auswirkungen} &
+				{\cellcolor{white}K} & {\cellcolor{white}M} & {\cellcolor{white}L} & {\cellcolor{white}P} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{9}{r}{\cellcolor{white}\textit{Fortsetzung auf der nächsten Seite}} \\
+			\endfoot
+			\bottomrule
+			\endlastfoot
+			\TablesafeInputIfFileExists{res/sideeffects.tex}{}{}
+		\end{tabularx}
+	\end{landscape}
+	\clearpage
+}
