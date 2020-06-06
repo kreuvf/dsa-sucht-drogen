@@ -165,3 +165,112 @@ Wird mehrmals dieselbe Nebenwirkung erwürfelt, entscheidet der Meister, ob die 
 	\end{landscape}
 	\clearpage
 }
+
+\subsection{Beispiele}
+Nach all den Regeln und langen Tabellen wird es Zeit, sich einige Beispiele anzuschauen, die verdeutlichen sollen wie diese Regeln angewendet werden sollen.
+
+In allen Beispielen versucht der zyklopäische Theaterzauberer \emph{Addiktaïos} seine Mibelsucht in seiner Heimat zu befriedigen. Er hat Zugriff auf ein archaisches Labor und verfügt über die folgenden Werte:
+
+\begin{center}
+	\setlength{\tabcolsep}{11pt}
+	\begin{tabular}{llllllll}
+		\toprule
+		MU: 12 & KL: 12 & IN: 12 & CH: 12 & FF: 12 & GE: 12 & KO: 12 & KK: 12 \\
+		\cmidrule(lr){1-8}
+		\multicolumn{8}{l}{Krankheitsstufe der Sucht: 8} \\
+		\cmidrule(lr){1-8}
+		\multicolumn{4}{l}{Alchemie: 5} & \multicolumn{4}{l}{Gassenwissen: 7} \\
+		\multicolumn{4}{l}{Pflanzenkunde: 8} & \multicolumn{4}{l}{Sinnenschärfe: 6} \\
+		\multicolumn{4}{l}{Wildnisleben: 7} & \multicolumn{4}{l}{Zechen: 6} \\
+		\cmidrule(lr){1-8}
+		\multicolumn{4}{l}{Kräutersuche (einfache Suchdauer): 7} & \multicolumn{4}{l}{Kräutersuche (doppelte Suchdauer): 11} \\
+		\bottomrule
+	\end{tabular}
+\end{center}
+
+\subsubsection{Beschaffung in der Unterwelt (Erfolg)}
+\begin{enumerate}
+	\item \emph{Gassenwissen}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4): \SITaPs{1} (= Qualität der Rauschmittel)
+	\item \emph{Zechen}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4), erleichtert um die Qualität der Rauschmittel (1): \SITaPs{-4}
+	\item Ergebnis in \vref{tbl-auswirkungen-konsum} ablesen:
+	\begin{itemize}
+		\item Hauptwirkung tritt ein
+		\item Nebenwirkungen: Probe mit 1W20 gegen |TaP*|, also 4
+		\item 1W20 für Nebenwirkungsprobe: 2
+		\item eine kurzfristige Nebenwirkung tritt ein
+	\end{itemize}
+	\item Dauer der Nebenwirkung bestimmen (\vref{tbl-nebenwirkungsklassen})
+	\begin{itemize}
+		\item 3W6~h: \SIh{8} nach Ende der Hauptwirkung
+	\end{itemize}
+	\item Auswirkung auswürfeln (\vref{tbl-nebenwirkungen})
+	\begin{itemize}
+		\item 1W4 und 1W20: 1 und 9
+		\item Anschwellen von Körperteilen: Details auswürfeln
+		\item GE sinkt um 5, FF sinkt um 2, GS sinkt um 1
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Beschaffung in der Unterwelt (Fehlschlag, keine Konsequenzen)}
+\begin{enumerate}
+	\item \emph{Gassenwissen}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4): \SITaPs{-4}
+	\item Prüfwurf: 1W20 gegen |TaP*|, also 4
+	\item 1W20 für Auswirkungsprobe: 7 (misslungen)
+	\item Ergebnis: Der Charakter findet niemanden, der ihm die gewünschten Rauschmittel verkauft, ohne dass das weitere Konsequenzen nach sich zieht.
+\end{enumerate}
+
+\subsubsection{Beschaffung in der Unterwelt (Fehlschlag, mit Konsequenzen)}
+\begin{enumerate}
+	\item \emph{Gassenwissen}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4): \SITaPs{-11}
+	\item Prüfwurf: 1W20 gegen |TaP*|, also 11
+	\item 1W20 für Auswirkungsprobe: 10 (gelungen)
+	\item Auswirkung erwürfeln: |TaP*| + explodierender W20: 11 + 8 = 19
+	\item Auswirkung in \vref{tbl-auswirkungen} nachschlagen: Auswirkung~\ref{pickpocket-lose-money-2} auf S.~\pageref{pickpocket-lose-money-2}
+	\begin{itemize}
+		\item 1W10 zur Bestimmung des genauen Geldverlustes: 5
+		\item Ergebnis: Du winktest so aufdringlich mit deinem Geld, dass einige Taschendiebe dich nicht mehr so schwer daran schleppen lassen wollten. Du verlierst \SIpct{20} des mitgeführten Geldes.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Herstellung auf eigene Faust (Erfolg)}
+\begin{enumerate}
+	\item \emph{Kräutersuche}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4): \SITaPs{2} (= Qualität der Ausgangsmaterialien, Menge: eine Portion)
+	\item \emph{Alchemie}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4) und erleichtert um die Qualität der Ausgangsmaterialien (2): \SITaPs{3} (= Qualität der Rauschmittel, Menge: eine Anwendung)
+	\item \emph{Zechen}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4), erleichtert um die Qualität der Rauschmittel (3): \SITaPs{-4}
+	\item Ergebnis in \vref{tbl-auswirkungen-konsum} ablesen:
+	\begin{itemize}
+		\item Hauptwirkung tritt ein
+		\item Nebenwirkungen: Probe mit 1W20 gegen |TaP*|, also 4
+		\item 1W20 für Nebenwirkungsprobe: 14
+		\item eine kurzfristige Nebenwirkung und eine mittelfristige Nebenwirkung treten ein
+	\end{itemize}
+	\item Beginne und Dauern der Nebenwirkungen bestimmen (\vref{tbl-nebenwirkungsklassen})
+	\begin{itemize}
+		\item kurzfristig (3W6~h): \SIh{12} nach Ende der Hauptwirkung
+		\item mittelfristig (nach 1W3~d, für 3~+~1W6~d): ab \SId{1} nach Ende der Hauptwirkung für \SId{4}
+	\end{itemize}
+	\item kurzfristige Auswirkung auswürfeln (\vref{tbl-nebenwirkungen})
+	\begin{itemize}
+		\item 1W4 und 1W20: 1 und 15
+		\item Herzrasen, 2W6 Erschöpfung pro Tag
+	\end{itemize}
+	\item mittelfristige Auswirkung auswürfeln (\vref{tbl-nebenwirkungen})
+	\begin{itemize}
+		\item 1W4 und 1W20: 4 und 4
+		\item feste Gewohnheit
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Herstellung auf eigene Faust (Fehlschlag, keine Ausgangsmaterialien)}
+\begin{enumerate}
+	\item \emph{Kräutersuche}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4): \SITaPs{-9}
+	\item keine Ausgangsmaterialien zum Weitermachen
+\end{enumerate}
+
+\subsubsection{Herstellung auf eigene Faust (Fehlschlag, kein Produkt)}
+\begin{enumerate}
+	\item \emph{Kräutersuche}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4): \SITaPs{1} (= Qualität der Ausgangsmaterialien, Menge: eine Portion)
+	\item \emph{Alchemie}-Probe erschwert um die halbe Krankheitsstufe der Sucht (4) und erleichtert um die Qualität der Ausgangsmaterialien (1): \SITaPs{-3}
+	\item kein Produkt
+\end{enumerate}
+
