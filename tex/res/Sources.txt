@@ -3,3 +3,7 @@ Source: https://pixabay.com/images/id-906140/
 Author: Seksak Kerdkanno (https://pixabay.com/users/kerdkanno-1334070/)
 Licence: PD (Pixabay)
 
+Nelumbo_lutea_blossom.jpeg
+Source: https://commons.wikimedia.org/w/index.php?title=File:Nelumbo_lutea_blossom.jpeg&oldid=141771386
+Author: Natural Resources Conservation Service
+Licence: Public Domain (work of U.S. federal government)
