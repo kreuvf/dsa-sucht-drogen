@@ -193,10 +193,16 @@
 
 % % % % % % % % % % % % % % % % % % % %
 % biblatex
-\usepackage[sorting=none,style=alphabetic,maxcitenames=2,maxbibnames=99999,hyperref=true,backref=true,abbreviate=false,alldates=iso,seconds=true,backend=biber]{biblatex}
+\usepackage[style=alphabetic,maxcitenames=2,maxbibnames=99999,hyperref=true,backref=true,abbreviate=false,alldates=iso,seconds=true,backend=biber]{biblatex}
 
 \DeclareFieldFormat{labelalpha}{\thefield{entrykey}}
 \DeclareFieldFormat{extraalpha}{}
+
+\DeclareLabelalphaTemplate{
+  \labelelement{
+    \field[final]{citekey}
+  }
+}
 
 \xpatchbibmacro{name:andothers}{%
   \bibstring{andothers}%
