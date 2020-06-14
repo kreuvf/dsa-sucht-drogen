@@ -1,0 +1,60 @@
+\appendix
+
+\chapter{Tabellen}
+\epigraph{Wenn es DSA an etwas mangelt, dann sind es definitiv Tabellen.}{\emph{--- Niemand jemals}}
+% Use \vspace*{-\baselineskip} to circumvent strut after itemize giving a blank line
+% Source: https://tex.stackexchange.com/a/141674/92368
+{
+\addcontentsline{toc}{section}{Auswirkungen misslungener Rauschmittelbeschaffung in der Unterwelt}
+\rowcolors{2}{tablelightblue}{white}
+\begin{tabularx}{\linewidth}{p{1.2cm}p{14.8cm}}
+	\caption[Auswirkungen misslungener Rauschmittelbeschaffung in der Unterwelt]{Auswirkungen misslungener Rauschmittelbeschaffung in der Unterwelt. Misslungene Gassenwissenproben zur Beschaffung von Rauschmitteln in der Unterwelt können bestimmte Auswirkungen haben, die über den unter \vref{beschaffung-unterwelt} beschriebenen Mechanismus ein Ergebnis von mindestens 2 liefern. Der Schweregrad der Auswirkung steigt mehr oder weniger mit dem Ergebnis an. Da etliche Auswirkungen auch zu Schadenspunkten führen, sei dem Meister ans Herz gelegt, dass diese Tabelle \emph{nicht} das Ziel verfolgt, dem Süchtigen möglichst den Spielspaß zu vermiesen und ihn ins Grab zu führen. Kein Charakter soll durch die bloße Benutzung dieser Auswirkungentabelle befürchten müssen zu sterben. Sollte eine bestimmte Auswirkung unpassend erscheinen, liegt es am Meister sich in der Nähe des Ergebnisses umzuschauen, um eine geeignetere Auswirkung zu finden.\label{tbl-auswirkungen}} \\
+	\toprule
+	{\cellcolor{white}Ergebnis} & {\cellcolor{white}Auswirkung} \\
+	\hline \endfirsthead
+	\caption[]{\cellcolor{white}\textit{Fortsetzung von der vorhergehenden Seite}} \\
+	\toprule
+	{\cellcolor{white}Ergebnis} & {\cellcolor{white}Auswirkung} \\
+	\hline
+	\endhead
+	\hline
+	\multicolumn{2}{r}{\cellcolor{white}\textit{Fortsetzung auf der nächsten Seite}} \\
+	\endfoot
+	\bottomrule
+	\endlastfoot
+	\TablesafeInputIfFileExists{res/consequences/consequences.tex}{}{}
+\end{tabularx}
+}
+
+\afterpage{
+	\clearpage
+	\begin{landscape}
+		\addcontentsline{toc}{section}{Auswirkungen des Rauschmittelkonsums}
+		\rowcolors{2}{tablelightblue}{white}
+		\setlength{\tabcolsep}{4.25pt}
+		\setlist[itemize]{leftmargin=12pt}
+		\setlist[enumerate]{leftmargin=12pt}
+		\begin{tabularx}{\textheight}{@{\hspace{1pt}}C{1.7cm}@{\hspace{2pt}}C{1.1cm}@{\hspace{2pt}}L{4.0cm}C{1.3cm}L{12.6cm}C{0.35cm}@{\hspace{4pt}}C{0.35cm}@{\hspace{4pt}}C{0.35cm}@{\hspace{4pt}}C{0.35cm}@{\hspace{1pt}}}
+			\caption[Auswirkungen des Rauschmittelkonsums]{Auswirkungen des Rauschmittelkonsums. Aus den Würfen der ersten beiden Spalten lässt sich die dazugehörige Auswirkung des Rauschmittelkonsums ablesen. Magische Charaktere verwenden für den ersten Wurf 1W4, alle anderen Charaktere 1W3. Ist eine Auswirkung noch nicht definiert, so muss der W20 erneut gewürfelt werden. Ist mit der Auswirkung ein Zufallswert verbunden, muss dieser ebenfalls ausgewürfelt werden. Für die Auswirkung können weitere Würfe nötig werden. Die letzten vier Spalten geben die Empfehlung für die Eignung einer Auswirkung für eine bestimmte Nebenwirkungsklasse an.\label{tbl-nebenwirkungen}} \\
+			\toprule
+			{\cellcolor{white}1W3/1W4} & {\cellcolor{white}1W20} & {\cellcolor{white}Kurzbeschreibung} & {\cellcolor{white}Wert} & {\cellcolor{white}Regeltechnische Auswirkungen} &
+				{\cellcolor{white}K} & {\cellcolor{white}M} & {\cellcolor{white}L} & {\cellcolor{white}P} \\
+			\hline \endfirsthead
+			\caption[]{\cellcolor{white}\textit{Fortsetzung von der vorhergehenden Seite}} \\
+			\toprule
+			{\cellcolor{white}1W3/1W4} & {\cellcolor{white}1W20} & {\cellcolor{white}Kurzbeschreibung} & {\cellcolor{white}Wert} & {\cellcolor{white}Regeltechnische Auswirkungen} &
+				{\cellcolor{white}K} & {\cellcolor{white}M} & {\cellcolor{white}L} & {\cellcolor{white}P} \\
+			\hline
+			\endhead
+			\hline
+			\multicolumn{9}{r}{\cellcolor{white}\textit{Fortsetzung auf der nächsten Seite}} \\
+			\endfoot
+			\bottomrule
+			\endlastfoot
+			\TablesafeInputIfFileExists{res/sideeffects.tex}{}{}
+		\end{tabularx}
+	\end{landscape}
+	\clearpage
+}
+
+\end{document}

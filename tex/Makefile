@@ -8,7 +8,8 @@ DSASUCHTDROGEN = \
 	sucht-original.tex \
 	sucht-hausregel.tex \
 	random-drugs.tex \
-	tail.tex
+	tail.tex \
+	appendices.tex
 FIGS = \
 	Regelübersicht_600dpi.png
 
