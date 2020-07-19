@@ -69,6 +69,7 @@ clean-tex:
 	_dsa-sucht-drogen.nls \
 	_dsa-sucht-drogen.out \
 	_dsa-sucht-drogen.run.xml \
+	._dsa-sucht-drogen.tex.swp \
 	_dsa-sucht-drogen.toc
 
 clean-intermediary:

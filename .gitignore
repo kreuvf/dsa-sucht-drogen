@@ -23,6 +23,7 @@
 **/pythontex-files-_thesis-nice
 **/*.nav
 **/*.snm
+**/*.tex.swp
 tex/dsa-sucht-drogen.pdf
 **/pairs.txt
 **/consequences.tex
