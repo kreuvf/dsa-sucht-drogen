@@ -1,3 +1,4 @@
+General (true for all)
 * Transform: 90° anti-clockwise
 * Desaturate: Lightness
 * Colours:
@@ -8,4 +9,24 @@
 * Two new layers, one below, one above image
 * Below layer: Fill with #FFFFFFFF
 * Above layer: Fill with #0B2C80FF, Mode: Colour
+
+Full Background
 * Image layer: Opacity 20.0%
+* Posterise: 33
+* Scale image to 35%
+
+Frame Background
+* Image layer: Opacity 50.0%
+* Remove leftmost 9 pixels
+* Remove rightmost 9 pixels
+* Print Size: 210 mm x 297 mm
+* Add Alpha channel to paper layer
+* Select rectangle from 463,695 to 4403,6187 on Image layer (Position: 463, 695, Size: 3940, 5492)
+* Grow selection by 15 mm
+* Feather selection by 20 mm
+* Remove selection
+* Export PNG
+* Load PNG
+* Scale image to 35%
+* Posterise: 33
+
