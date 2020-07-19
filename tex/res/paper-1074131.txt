@@ -1,0 +1,11 @@
+* Transform: 90° anti-clockwise
+* Desaturate: Lightness
+* Colours:
+** Levels:
+*** Channel: value
+*** Input: 75/1.00/224
+*** Output: 0/255
+* Two new layers, one below, one above image
+* Below layer: Fill with #FFFFFFFF
+* Above layer: Fill with #0B2C80FF, Mode: Colour
+* Image layer: Opacity 20.0%
