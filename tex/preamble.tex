@@ -166,7 +166,25 @@
 \setlength{\columnsep}{18pt}
 \setlength{\columnseprule}{0.25ex}
 \def\columnseprulecolor{\color{digibluedark}}
+% Gehört zur Verhinderung eines Trennstriches bei _jedem_ \twocolumn (wie in der nomenclature)
+\newcommand{\latexcolumnseprulecolor}{\color{red}}
 
+% % % % % % % % % % % % % % % % % % % %
+% etoolbox
+% Verhindern, dass in jedem \twocolumn ein Trennstrich erscheint
+% Selbst gepatcht aus:
+% Quelle: https://tex.stackexchange.com/a/119111
+% Quelle: https://tex.stackexchange.com/a/65542
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\@outputdblcol{% find
+  \normalcolor\vrule \@width\columnseprule
+}{% and replace by
+}{% success
+}{% failure
+  \@latex@warning{Patching \string\@outputdblcol\space failed}%
+}
+\makeatother
 
 \usepackage{gitinfo2}
 
