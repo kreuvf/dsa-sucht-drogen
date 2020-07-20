@@ -33,6 +33,7 @@
 	\clearpage
 	\begin{landscape}
 		\addcontentsline{toc}{section}{Auswirkungen des Rauschmittelkonsums}
+		\label{tbl-nebenwirkungen-fake}% Hack, um falsche Verlinkung ein wenig auszugleichen
 		\rowcolors{2}{tablelightblue}{white}
 		\setlength{\tabcolsep}{4.25pt}
 		\setlist[itemize]{leftmargin=12pt}
@@ -43,7 +44,7 @@
 			{\cellcolor{white}1W3/1W4} & {\cellcolor{white}1W20} & {\cellcolor{white}Kurzbeschreibung} & {\cellcolor{white}Wert} & {\cellcolor{white}Regeltechnische Auswirkungen} &
 				{\cellcolor{white}K} & {\cellcolor{white}M} & {\cellcolor{white}L} & {\cellcolor{white}P} \\
 			\hline \endfirsthead
-			\caption[]{\cellcolor{white}\textit{Fortsetzung von der vorhergehenden Seite (Tabellenanfang auf S.~\pageref{tbl-nebenwirkungen})}} \\
+			\caption[]{\cellcolor{white}\textit{Fortsetzung von der vorhergehenden Seite (Tabellenanfang auf S.~\hyperref[tbl-nebenwirkungen-fake]{\pageref*{tbl-nebenwirkungen}})}} \\
 			\toprule
 			{\cellcolor{white}1W3/1W4} & {\cellcolor{white}1W20} & {\cellcolor{white}Kurzbeschreibung} & {\cellcolor{white}Wert} & {\cellcolor{white}Regeltechnische Auswirkungen} &
 				{\cellcolor{white}K} & {\cellcolor{white}M} & {\cellcolor{white}L} & {\cellcolor{white}P} \\
