@@ -73,6 +73,11 @@ for conseq in conseqList:
 	else:
 		severityStr = str(severity)
 	severityStr = severityStr + ' \\conseq{{{}}}'.format(conseq[1])
+	# Add labels for convenience references (includes phantom section and TOC entry)
+	if not(severity % 10):
+		severityStr = severityStr + '\\phantomsection{}' + \
+			'\\label{{conseq-{}}}'.format(str(severity).translate(str.maketrans('0123456789', 'oabcdefghi'))) + \
+			'\\addcontentsline{toc}{subsection}' + '{{Auswirkung {}}}'.format(severity)
 	tablerow = '{{{}}} & {{{}}} \\\\'.format(
 		severityStr,
 		conseqStr
