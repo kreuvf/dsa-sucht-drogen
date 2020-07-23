@@ -2,9 +2,9 @@ DSASUCHTDROGEN = \
 	preamble.tex \
 	title.tex \
 	abstract.tex \
+	preface.tex \
 	nomencl-entries.tex \
 	indices.tex \
-	preface.tex \
 	sucht-original.tex \
 	sucht-hausregel.tex \
 	random-drugs.tex \
